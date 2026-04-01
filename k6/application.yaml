@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/rukevweubio/Freashapp-tracker.git
     targetRevision: main
-    path: k6
+    path: k6/
 
   destination:
     server: https://kubernetes.default.svc
