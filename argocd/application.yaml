@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k6-tests
+  name: k6-tests-file
   namespace: argocd
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/rukevweubio/Freashapp-tracker.git
+    repoURL: https://github.com/smogalloyubio/GoogleCloud-deployment-k6-load-testing-argocd.git 
     targetRevision: main
     path: k6
 
