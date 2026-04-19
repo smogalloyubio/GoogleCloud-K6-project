@@ -29,7 +29,7 @@ jobs:
       - name: Build main app image
         uses: docker/build-push-action@v5
         with:
-          context: ./Dockerfile
+          context: .
           load: true   
           tags: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
@@ -37,7 +37,7 @@ jobs:
       - name: Build load test image
         uses: docker/build-push-action@v5
         with:
-          context: ./k6/Dockerfile 
+          context: ./k6
           load: true
           tags: ${{ env.IMAGE_TEST_NAME }}:${{ env.IMAGE_TEST_TAG }}
 
