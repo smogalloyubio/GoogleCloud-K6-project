@@ -14,3 +14,11 @@ pnpm-debug.log*
 *.sh 
 *.js 
 apps
+.git
+argocd
+k6
+*.log
+dist
+.env
+installk6.sh
+argocdcli.sh

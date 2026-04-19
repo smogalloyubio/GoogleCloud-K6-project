@@ -1,9 +1,18 @@
-# Add the k6 GPG key
-sudo gpg --no-default-keyring --keyring /usr/share/keyrings/k6-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
+#!/bin/bash
 
-# Add the k6 repository to your sources list
+
+sudo rm -f /usr/share/keyrings/k6-archive-keyring.gpg
+sudo rm -f /etc/apt/sources.list.d/k6.list
+
+
+sudo mkdir -p /usr/share/keyrings
+
+
+curl -fsSL https://dl.k6.io/key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/k6-archive-keyring.gpg
+
+
 echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
 
-# Update your package list and install k6
+
 sudo apt-get update
-sudo apt-get install k6
+sudo apt-get install -y k6
