@@ -6,7 +6,7 @@ on:
 
 env:
   IMAGE_NAME: rukevweubio/mycluster-app
-  IMAGE_TAG: v1
+  IMAGE_TAG: v3
   IMAGE_TEST_NAME: rukevweubio/my-load-test
   IMAGE_TEST_TAG: v2
 
