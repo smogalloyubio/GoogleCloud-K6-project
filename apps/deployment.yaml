@@ -23,7 +23,6 @@ spec:
       containers:
       - name: my-app
         image: rukevweubio/mycluster-app:v1
-        imagePullPolicy: Always
         ports:
          - name: http
            containerPort: 3000
