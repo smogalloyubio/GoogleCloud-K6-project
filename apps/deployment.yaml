@@ -28,7 +28,7 @@ spec:
         ports:
          - name: http
            containerPort: 3000
-        env:
+        env: 
           - name: DATA_FILE
             value: "/tmp/data.json"
         securityContext:
