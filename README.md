@@ -251,7 +251,7 @@ This step tells Argo CD what to deploy and where.
 
 argocd app create webapp \
 --repo https://github.com/smogalloyubio/GoogleCloud-k6load-testing-Argocd-Deployment.git
---path manifests \
+--path apps\
 --dest-server https://kubernetes.default.svc \
 --dest-namespace dev
 --sync-option
