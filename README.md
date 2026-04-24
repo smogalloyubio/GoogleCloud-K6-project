@@ -368,3 +368,5 @@ export default function () {
 }
 ```
 ![argocd console](https://github.com/smogalloyubio/GoogleCloud-k6load-testing-Argocd-Deployment/blob/main/picture/Screenshot%202026-04-19%20at%2017.50.25.png)
+
+![k6 load testing](https://github.com/smogalloyubio/GoogleCloud-k6load-testing-Argocd-Deployment/blob/main/picture/Screenshot%202026-04-19%20at%2017.52.54.png)
