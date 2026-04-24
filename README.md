@@ -261,3 +261,5 @@ argocd app get webapp
 
 ```
 ![argocd installtion](https://github.com/smogalloyubio/GoogleCloud-k6load-testing-Argocd-Deployment/blob/main/picture/Screenshot%202026-04-19%20at%2018.04.59.png)
+
+![Argocd cli](https://github.com/smogalloyubio/GoogleCloud-k6load-testing-Argocd-Deployment/blob/main/picture/Screenshot%202026-04-19%20at%2016.48.28.png)
