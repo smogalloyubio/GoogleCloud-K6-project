@@ -263,3 +263,15 @@ argocd app get webapp
 ![argocd installtion](https://github.com/smogalloyubio/GoogleCloud-k6load-testing-Argocd-Deployment/blob/main/picture/Screenshot%202026-04-19%20at%2018.04.59.png)
 
 ![Argocd cli](https://github.com/smogalloyubio/GoogleCloud-k6load-testing-Argocd-Deployment/blob/main/picture/Screenshot%202026-04-19%20at%2016.48.28.png)
+----
+## K6 Load Testing Setup with Argo CD
+This section explains how K6 was installed, containerized, and deployed on the Kubernetes cluster using Argo CD (GitOps approach).
+The goal is to run automated load, smoke, and stress tests inside the same cluster where the application is deployed
+- Load testing the web application
+- Stress testing API endpoints
+- Running automated performance checks
+- Validating system stability under traffic
+In this project, K6 runs as a Kubernetes workload (Job / CronJob) managed by Argo CD.
+Step 2: Build K6 Docker Image
+First, the K6 test scripts are containerized using  docker image
+```
