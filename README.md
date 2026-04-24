@@ -287,3 +287,8 @@ USER k6
 
 ENTRYPOINT ["k6"]
 ```
+Step 3: Create Kubernetes Manifest for K6
+K6 runs as a Kubernetes Job (or CronJob for repeated tests).
+```
+
+
