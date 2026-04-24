@@ -351,11 +351,28 @@ dev namespace → application
 k6 namespace → performance testing
 This isolation ensures clean separation of workloads.
 
-2. NetworkPolicy allows ONLY K6 traffic
-The policy defines:
-Ingress rules → who can access the app
-Namespace selector → only K6 namespace is allowed
-Pod selector → only specific app pods are reachable
-Port control → only application port is exposed (e.g., 3000)
 
+```
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: my-app-net-policy
+  namespace: dev
+spec:
+  podSelector:
+    matchLabels:
+      app: my-app
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+      - namespaceSelector:
+          matchlabels:
+             name: testing 
+      - podSelector:
+        matchLabels:
+          role: k6-tester 
+    ports:
+    - protocol: TCP
+      port: 3000
 ```
