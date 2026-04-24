@@ -41,4 +41,46 @@ The  solution ensures that applications are secure, tested, and production-ready
 - Kubernetes-Native Load Testing (K6): K6 is deployed within the cluster to perform real-time performance testing against the application.
 - Network Policy Enforcement: Kubernetes Network Policies restrict traffic, allowing only K6 to communicate with the application for controlled testing.
 - Automated Testing with CronJobs: Scheduled performance tests run automatically using Kubernetes CronJobs.
-- Cloud-Native Architecture: Fully designed for Kubernetes environments with scalability, security, and resilience in mind.
+- Cloud-Native Architecture: Fully designed for Kubernetes environments with scalability, security, and resilience in mind
+
+---
+📊 Architecture Diagram
+
+![archetectural diagram](https://github.com/smogalloyubio/GoogleCloud-k6load-testing-Argocd-Deployment/blob/main/picture/Blank%20diagram.jpeg)
+
+Infrastructure Layer
+- Docker Hub for container images
+- Kubernetes namespaces for isolation
+- CI/CD & GitOps Layer
+- GitHub Actions builds and pushes:
+- Web application image
+- K6 testing image
+- Argo CD syncs GitHub repo to Kubernetes cluster
+- Testing Layer
+- K6 deployed inside Kubernetes
+- Runs load, stress, and smoke tests
+- Sends traffic to the application service
+---
+  ## 🧱 Technical Architecture
+
+| Technology         | Purpose                  | Key Benefit                          |
+|------------------|------------------------|--------------------------------------|
+| TypeScript        | Application Development | Type safety and maintainability      |
+| Node.js           | Backend Runtime         | Scalable server execution            |
+| React / Vite      | Frontend                | Fast UI development                  |
+| Docker            | Containerization        | Consistent environments              |             |
+| GitHub Actions    | CI/CD                   | Automated build & deploy             |
+| Argo CD           | GitOps                  | Declarative deployments              |
+| Kubernetes        | Orchestration           | Scalability & resilience             |
+| K6                | Performance Testing     | Load & stress testing                |
+
+## Workflow
+- Developer pushes code to GitHub
+- GitHub Actions builds:
+- Web app Docker image
+- K6 test Docker image
+- Images are pushed to Docker Hub
+- Argo CD syncs manifests to Kubernetes
+- Application is deployed in cluster
+- K6 runs performance tests
+- Results validate application stability
